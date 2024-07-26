@@ -45,3 +45,10 @@ module "server" {
 	nic_name = "myserver1-nic1"
 
 }
+
+module "sql" {
+	source = "./modules/sql/"
+	rg_location = "${var.rgloc}"
+	rg_name = "${var.rgname}"
+
+}
